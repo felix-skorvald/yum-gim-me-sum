@@ -12,6 +12,10 @@
     display: none;
 }
 
+section {
+    min-height: 100vh;
+}
+
 /* MENU */
 
 .menu {
