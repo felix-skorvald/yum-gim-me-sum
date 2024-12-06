@@ -1,0 +1,115 @@
+:root {
+    --shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    --green: #489078;
+    --text-white: #f4f3f1f0;
+    --background-grey: #605858;
+    --pop-grey: #f1f0ec3d;
+    --chosen-grey: #353131;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: var(--text-white);
+}
+
+.hidden {
+    display: none;
+}
+
+.dot-box {
+    border-bottom: 2px dotted rgb(255, 255, 255);
+    flex-grow: 1;
+    margin: 0.3rem;
+}
+
+section {
+    min-height: 100vh;
+}
+
+/* MENU */
+
+.menu {
+    background-color: var(--green);
+}
+
+.dish-container {
+    background-color: var(--background-grey);
+    margin: 0 1rem 0 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--pop-grey);
+    box-shadow: var(--shadow);
+}
+
+.dish-container * {
+    text-shadow: var(--shadow);
+}
+
+/* WONTONS */
+
+.wontons {
+    margin: 0.7rem;
+}
+
+.wontons .dish-container:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.wontons .dish-container:last-child {
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+}
+
+/* title-container */
+.wontons .dish-container > div {
+    display: flex;
+}
+
+/* DIPS */
+
+.dips {
+    margin: 0.7rem;
+}
+
+.dips .dish-container {
+    border-radius: 10px;
+}
+
+.dips .dish-container > div {
+    display: flex;
+}
+
+.flavour-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flavour-container > p {
+    margin: 0.1rem;
+    padding: 0.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 7px;
+    background-color: var(--pop-grey);
+}
+
+/* DRINKS */
+.drinks {
+    margin: 0.7rem;
+}
+
+.drinks .dish-container {
+    border-radius: 10px;
+}
+
+/* CART */
+
+.cart {
+    background-color: var(--text-white);
+}
