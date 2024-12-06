@@ -1,5 +1,5 @@
 :root {
-    --shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     --green: #489078;
     --text-white: #f4f3f1f0;
     --background-grey: #605858;
@@ -15,12 +15,6 @@
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-    color: var(--text-white);
-}
-
-.hidden {
-    display: none;
 }
 
 .dot-box {
@@ -29,19 +23,42 @@
     margin: 0.3rem;
 }
 
+.cart-button {
+    border: none;
+    place-self: flex-end;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
 section {
     min-height: 100vh;
+}
+h1 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+p {
+    font-size: 14px;
 }
 
 /* MENU */
 
 .menu {
     background-color: var(--green);
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .dish-container {
     background-color: var(--background-grey);
-    margin: 0 1rem 0 1rem;
     padding: 1rem;
     border-bottom: 1px solid var(--pop-grey);
     box-shadow: var(--shadow);
@@ -52,10 +69,6 @@ section {
 }
 
 /* WONTONS */
-
-.wontons {
-    margin: 0.7rem;
-}
 
 .wontons .dish-container:first-child {
     border-radius: 10px 10px 0 0;
@@ -74,7 +87,7 @@ section {
 /* DIPS */
 
 .dips {
-    margin: 0.7rem;
+    margin-top: 1rem;
 }
 
 .dips .dish-container {
@@ -86,14 +99,17 @@ section {
 }
 
 .flavour-container {
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .flavour-container > p {
-    margin: 0.1rem;
+    text-align: center;
+    margin: 0.3rem;
     padding: 0.5rem;
+    flex-grow: 1;
     box-shadow: var(--shadow);
     border-radius: 7px;
     background-color: var(--pop-grey);
@@ -101,15 +117,17 @@ section {
 
 /* DRINKS */
 .drinks {
-    margin: 0.7rem;
+    margin-top: 1rem;
 }
 
 .drinks .dish-container {
     border-radius: 10px;
 }
 
-/* CART */
+.drinks .dish-container > div {
+    display: flex;
+}
 
-.cart {
-    background-color: var(--text-white);
+.hidden {
+    display: none;
 }

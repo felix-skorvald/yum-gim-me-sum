@@ -32,7 +32,7 @@ function renderMenu(menu) {
 
         wontonTitle.innerText = wonton.name.toUpperCase();
         wontonPrice.innerText = wonton.price + " SEK";
-        wontonIngredients.innerText = wonton.ingredients;
+        wontonIngredients.innerText = wonton.ingredients.join(", ");
 
         menuWontons.append(wontonContainer);
         wontonContainer.append(wontonTilteContainer);
@@ -53,6 +53,7 @@ function renderMenu(menu) {
 
     dipTitle.innerText = "DIPSÅS";
     dipPrice.innerText = dips[1].price + " SEK";
+
     dipContainer.append(dipTitleContainer, dipFlavourContainer);
     dipTitleContainer.append(dipTitle, dotBox2, dipPrice);
     menuDips.append(dipContainer);
@@ -78,6 +79,7 @@ function renderMenu(menu) {
 
     drinkTitle.innerText = "DRICKA";
     drinkPrice.innerText = drinks[1].price + " SEK";
+
     drinkContainer.append(drinkTitleContainer, drinkFlavourContainer);
     drinkTitleContainer.append(drinkTitle, dotBox3, drinkPrice);
     menuDrinks.append(drinkContainer);
