@@ -24,6 +24,11 @@
     border-bottom: 2px dotted var(--chosen-grey);
 }
 
+.cart-items {
+    margin-top: 1rem;
+    margin-bottom: auto;
+}
+
 .item-container {
     padding: 1rem;
     border-bottom: 1px solid var(--pop-grey);
@@ -31,6 +36,28 @@
 
 .item-container > div {
     display: flex;
+}
+
+.item-container > div:first-child {
+    margin-bottom: 0.3rem;
+}
+
+.quantity {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.quantity-buttons {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 0px;
+    text-align: center;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: var(--cart-grey);
+    color: var(--background-grey);
 }
 
 .cart > footer {

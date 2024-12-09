@@ -1,7 +1,7 @@
 import { hideAll } from "./hide-all.js";
 import { getMenu } from "./api.js";
-import { renderMenu, cart, cartToSend } from "./menu.js";
-import { renderCart } from "./cart.js";
+import { renderMenu } from "./menu.js";
+import { renderCart, cart, cartToSend } from "./cart.js";
 
 const cartButtons = document.querySelectorAll(".cart-button");
 const menuSection = document.querySelector(".menu");

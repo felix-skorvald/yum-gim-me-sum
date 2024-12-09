@@ -1,11 +1,9 @@
 import { getMenu } from "./api.js";
+import { cartToSend, cart } from "./cart.js";
 
 const menuWontons = document.querySelector(".wontons");
 const menuDips = document.querySelector(".dips");
 const menuDrinks = document.querySelector(".drinks");
-
-let cart = [];
-let cartToSend = [];
 
 export function getWontonList(menu) {
     console.log(menu);
@@ -112,5 +110,3 @@ function addToCart(item, element) {
     console.log(cart);
     console.log(cartToSend);
 }
-
-export { cart, cartToSend };
