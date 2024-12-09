@@ -1,14 +1,21 @@
 import { hideAll } from "./hide-all.js";
 import { getMenu } from "./api.js";
-import { getWontonList } from "./menu.js";
+import { renderMenu, cart, cartToSend } from "./menu.js";
+import { renderCart } from "./cart.js";
 
 const cartButtons = document.querySelectorAll(".cart-button");
 const menuSection = document.querySelector(".menu");
 const cartSection = document.querySelector(".cart");
-// getWontonList(await getMenu());
+const cartItems = document.querySelector(".cart-items");
+
+renderMenu(await getMenu());
 
 cartButtons.forEach((button) => {
-    button.addEventListener("click", toggleCart);
+    button.addEventListener("click", () => {
+        cartItems.innerHTML = "";
+        renderCart(cart, cartToSend);
+        toggleCart();
+    });
 });
 
 function toggleCart() {

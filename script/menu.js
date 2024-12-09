@@ -4,13 +4,16 @@ const menuWontons = document.querySelector(".wontons");
 const menuDips = document.querySelector(".dips");
 const menuDrinks = document.querySelector(".drinks");
 
+let cart = [];
+let cartToSend = [];
+
 export function getWontonList(menu) {
     console.log(menu);
     const wontons = menu.filter((item) => item.type === "wonton");
     console.log(wontons);
 }
 
-function renderMenu(menu) {
+export function renderMenu(menu) {
     const wontons = menu.filter((item) => item.type === "wonton");
     const dips = menu.filter((item) => item.type === "dip");
     const drinks = menu.filter((item) => item.type === "drink");
@@ -35,9 +38,12 @@ function renderMenu(menu) {
         wontonIngredients.innerText = wonton.ingredients.join(", ");
 
         menuWontons.append(wontonContainer);
-        wontonContainer.append(wontonTilteContainer);
+        wontonContainer.append(wontonTilteContainer, wontonIngredients);
         wontonTilteContainer.append(wontonTitle, dotBox, wontonPrice);
-        wontonContainer.append(wontonIngredients);
+
+        wontonContainer.addEventListener("click", () =>
+            addToCart(wonton, wontonContainer)
+        );
     });
     //render dips
     const dipContainer = document.createElement("div");
@@ -62,6 +68,7 @@ function renderMenu(menu) {
         const dipName = document.createElement("p");
         dipName.innerText = dip.name;
         dipFlavourContainer.append(dipName);
+        dipName.addEventListener("click", () => addToCart(dip, dipName));
     });
 
     //render drinks
@@ -88,7 +95,22 @@ function renderMenu(menu) {
         const drinkName = document.createElement("p");
         drinkName.innerText = drink.name;
         drinkFlavourContainer.append(drinkName);
+        drinkName.addEventListener("click", () => addToCart(drink, drinkName));
     });
 }
 
-renderMenu(await getMenu());
+function addToCart(item, element) {
+    const existingItem = cart.find((itemInCart) => itemInCart.id === item.id);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({ ...item, quantity: 1 });
+
+        element.classList.add("chosen");
+    }
+    cartToSend.push(item.id);
+    console.log(cart);
+    console.log(cartToSend);
+}
+
+export { cart, cartToSend };
