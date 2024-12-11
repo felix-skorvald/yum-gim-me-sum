@@ -60,7 +60,7 @@
     color: var(--background-grey);
 }
 
-.cart > footer {
+footer {
     display: flex;
     flex-direction: column;
     position: sticky;

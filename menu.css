@@ -64,6 +64,10 @@ p {
     box-shadow: var(--shadow);
 }
 
+.wontons .dish-container:hover {
+    background-color: var(--chosen-grey);
+}
+
 .dish-container * {
     text-shadow: var(--shadow);
 }
@@ -105,6 +109,10 @@ p {
     justify-content: space-between;
 }
 
+.flavour-container > p:hover {
+    background-color: var(--chosen-grey);
+}
+
 .flavour-container > p {
     text-align: center;
     margin: 0.3rem;
@@ -127,6 +135,17 @@ p {
 .drinks .dish-container > div {
     display: flex;
 }
+
+/* @media (min-width: 500px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section {
+        max-width: 60%;
+    }
+} */
 
 .hidden {
     display: none;

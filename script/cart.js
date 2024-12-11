@@ -1,4 +1,8 @@
+import { sendCart } from "./api.js";
+import { renderEta } from "./eta.js";
+
 const cartSection = document.querySelector(".cart");
+const etaSection = document.querySelector(".eta");
 const cartItems = document.querySelector(".cart-items");
 const cartSum = document.querySelector("#cart-sum");
 const buyButton = document.querySelector("#buy-button");
@@ -47,7 +51,7 @@ export function renderCart(cart, cartToSend) {
 
 function removeItem(item) {
     const index = cartToSend.indexOf(item.id);
-    const cartIndex = cartToSend.indexOf(item);
+    const cartIndex = cart.indexOf(item);
     if (item.quantity > 1) {
         item.quantity--;
         cartToSend.splice(index, 1);
@@ -65,5 +69,16 @@ function plusItem(item) {
     renderCart(cart, cartToSend);
     console.log(cart, cartToSend);
 }
+
+buyButton.addEventListener("click", async () => {
+    if (cartToSend.length === 0) {
+        console.log("listan är tom");
+    } else {
+        const order = await sendCart(cartToSend);
+        renderEta(order);
+        etaSection.classList.toggle("hidden");
+        cartSection.classList.add("hidden");
+    }
+});
 
 export { cart, cartToSend };
