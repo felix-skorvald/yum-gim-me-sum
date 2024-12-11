@@ -1,11 +1,13 @@
 import { hideAll } from "./hide-all.js";
-import { getMenu } from "./api.js";
+import { getMenu, getReceipt } from "./api.js";
 import { renderMenu } from "./menu.js";
 import { renderCart, cart, cartToSend } from "./cart.js";
+import { renderReceipt } from "./receipt.js";
 
 const cartButtons = document.querySelectorAll(".cart-button");
 const menuSection = document.querySelector(".menu");
 const cartSection = document.querySelector(".cart");
+const receiptSection = document.querySelector(".receipt");
 const cartItems = document.querySelector(".cart-items");
 
 renderMenu(await getMenu());
@@ -30,4 +32,10 @@ function resetToStart() {
     menuSection.classList.toggle("hidden");
 }
 
-export { resetToStart };
+async function showReceipt(orderId) {
+    hideAll();
+    receiptSection.classList.remove("hidden");
+    renderReceipt(await getReceipt(orderId));
+}
+
+export { resetToStart, showReceipt };

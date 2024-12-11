@@ -51,4 +51,21 @@ async function sendCart(cart) {
     }
 }
 
-export { sendCart, getMenu };
+async function getReceipt(orderId) {
+    const options = {
+        method: "GET",
+        headers: {
+            "x-zocom": KEY,
+        },
+    };
+    try {
+        const response = await fetch(url + "receipts/" + orderId, options);
+        const data = await response.json();
+        console.log(data);
+        return data.receipt;
+    } catch (error) {
+        console.log("Fel:", response.status, error);
+    }
+}
+
+export { sendCart, getMenu, getReceipt };

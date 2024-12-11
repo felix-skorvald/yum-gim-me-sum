@@ -1,9 +1,10 @@
 import { cart, cartToSend } from "./cart.js";
-import { resetToStart } from "./script.js";
+import { resetToStart, showReceipt } from "./script.js";
+import { getReceipt } from "./api.js";
 
 const etaTime = document.querySelector("#eta-time");
 const etaOrderId = document.querySelector("#eta-order-id");
-const resetButton = document.querySelector("#reset-button");
+const resetButton = document.querySelectorAll(".reset-button");
 const receiptButton = document.querySelector("#receipt-button");
 
 let orderID = "";
@@ -23,4 +24,8 @@ export function renderEta(order) {
     etaOrderId.innerText = "#" + order.order.id.toUpperCase();
 }
 
-resetButton.addEventListener("click", () => resetToStart());
+resetButton.forEach((button) => {
+    button.addEventListener("click", () => resetToStart());
+});
+
+receiptButton.addEventListener("click", () => showReceipt(orderID));

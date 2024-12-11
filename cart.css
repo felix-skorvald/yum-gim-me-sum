@@ -60,7 +60,7 @@
     color: var(--background-grey);
 }
 
-footer {
+.cart footer {
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -95,6 +95,10 @@ footer {
     border-radius: 5px;
     font-weight: 500;
     font-size: 22px;
+}
+
+#buy-button.empty {
+    opacity: 0.3;
 }
 
 .hidden {

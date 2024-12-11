@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="./menu.css" />
         <link rel="stylesheet" href="./eta.css" />
         <link rel="stylesheet" href="./cart.css" />
+        <link rel="stylesheet" href="./receipt.css" />
         <script type="module" src="./script/script.js"></script>
     </head>
     <body>
@@ -67,7 +68,7 @@
                     </div>
                     <p id="cart-sum"></p>
                 </div>
-                <button id="buy-button">TAKE MY MONEY!</button>
+                <button id="buy-button" class="empty">TAKE MY MONEY!</button>
             </footer>
         </section>
         <section class="eta hidden">
@@ -81,24 +82,35 @@
             </div>
             <footer>
                 <button id="receipt-button">SE KVITTO</button>
-                <button id="reset-button">GÖR EN NY BESTÄLLING</button>
+                <button class="reset-button">GÖR EN NY BESTÄLLING</button>
             </footer>
         </section>
-
-        <!-- Kanske blir dialogbox istället -->
-        <section class="recipt hidden">
-            <img src="" alt="" />
-            <h2>KVITTO</h2>
-            <p id="receipt-id"></p>
-            <footer>
-                <div class="cart-total">
+        <section class="receipt hidden">
+            <div class="receipt-container">
+                <header>
                     <div>
-                        <h4>TOTALT</h4>
-                        <p>inkl 20% moms</p>
+                        <img
+                            src="./img/logo.svg"
+                            alt="Yum-yum-gim-mie-sum-LOGOTYP"
+                            class="logo"
+                        />
                     </div>
-                    <p id="cart-sum"></p>
-                </div>
-                <button id="buy-button">TAKE MY MONEY</button>
+                    <h2>KVITTO</h2>
+                    <p id="receipt-id"></p>
+                </header>
+                <div class="receipt-items"></div>
+                <footer>
+                    <div class="cart-total">
+                        <div>
+                            <h4>TOTALT</h4>
+                            <p>inkl 20% moms</p>
+                        </div>
+                        <p id="receipt-sum"></p>
+                    </div>
+                </footer>
+            </div>
+            <footer>
+                <button class="reset-button">GÖR EN NY BESTÄLLING</button>
             </footer>
         </section>
     </body>

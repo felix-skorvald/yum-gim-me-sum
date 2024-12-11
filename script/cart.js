@@ -46,6 +46,12 @@ export function renderCart(cart, cartToSend) {
         minusButton.addEventListener("click", () => removeItem(item));
     });
 
+    if (cartToSend.length === 0) {
+        buyButton.classList.add("empty");
+    } else {
+        buyButton.classList.remove("empty");
+    }
+
     cartSum.innerText = total.reduce((a, b) => a + b, 0) + " SEK";
 }
 
