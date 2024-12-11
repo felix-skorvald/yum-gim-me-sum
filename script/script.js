@@ -22,3 +22,12 @@ function toggleCart() {
     menuSection.classList.toggle("hidden");
     cartSection.classList.toggle("hidden");
 }
+
+function resetToStart() {
+    cart.length = 0;
+    cartToSend.length = 0;
+    hideAll();
+    menuSection.classList.toggle("hidden");
+}
+
+export { resetToStart };
