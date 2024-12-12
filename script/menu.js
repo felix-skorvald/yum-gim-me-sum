@@ -4,6 +4,7 @@ import { cartToSend, cart } from "./cart.js";
 const menuWontons = document.querySelector(".wontons");
 const menuDips = document.querySelector(".dips");
 const menuDrinks = document.querySelector(".drinks");
+const notification = document.querySelector("#notification");
 
 export function getWontonList(menu) {
     console.log(menu);
@@ -107,6 +108,16 @@ function addToCart(item, element) {
         element.classList.add("chosen");
     }
     cartToSend.push(item.id);
+    updateNotification();
     console.log(cart);
     console.log(cartToSend);
+}
+
+export function updateNotification() {
+    notification.innerText = cartToSend.length;
+    if (cartToSend.length === 0) {
+        notification.classList.add("hidden");
+    } else {
+        notification.classList.remove("hidden");
+    }
 }

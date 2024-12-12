@@ -42,6 +42,27 @@
     font-weight: 700;
     font-size: 30px;
 }
+@media (min-width: 500px) {
+    body {
+        display: flex;
+    }
+
+    .receipt {
+        align-self: center;
+        justify-self: center;
+        background-color: var(--green);
+        gap: 1rem;
+    }
+
+    .receipt-container {
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .receipt-container .cart-total {
+        border-radius: 0 0 10px 10px;
+    }
+}
 
 .hidden {
     display: none;

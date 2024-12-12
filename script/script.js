@@ -1,6 +1,6 @@
 import { hideAll } from "./hide-all.js";
 import { getMenu, getReceipt } from "./api.js";
-import { renderMenu } from "./menu.js";
+import { renderMenu, updateNotification } from "./menu.js";
 import { renderCart, cart, cartToSend } from "./cart.js";
 import { renderReceipt } from "./receipt.js";
 
@@ -23,13 +23,15 @@ cartButtons.forEach((button) => {
 function toggleCart() {
     menuSection.classList.toggle("hidden");
     cartSection.classList.toggle("hidden");
+    updateNotification();
 }
 
 function resetToStart() {
     cart.length = 0;
     cartToSend.length = 0;
     hideAll();
-    menuSection.classList.toggle("hidden");
+    menuSection.classList.remove("hidden");
+    updateNotification();
 }
 
 async function showReceipt(orderId) {

@@ -101,6 +101,15 @@
     opacity: 0.3;
 }
 
+@media (min-width: 500px) {
+    .cart {
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+}
+
 .hidden {
     display: none;
 }

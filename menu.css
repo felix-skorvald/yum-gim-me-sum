@@ -24,6 +24,7 @@
 }
 
 .cart-button {
+    position: relative;
     border: none;
     place-self: flex-end;
     border-radius: 10px;
@@ -136,16 +137,35 @@ p {
     display: flex;
 }
 
-/* @media (min-width: 500px) {
+#notification {
+    color: var(--text-white);
+    position: absolute;
+    background-color: #eb5757;
+    right: -0.7rem;
+    top: -0.7rem;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+#notification.hidden {
+    display: none;
+}
+
+@media (min-width: 500px) {
     body {
+        background-color: var(--green);
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     section {
         max-width: 60%;
+        min-height: 90%;
     }
-} */
+}
 
 .hidden {
     display: none;
