@@ -101,9 +101,9 @@
     opacity: 0.3;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 900px) {
     .cart {
-        width: 100%;
+        width: 678.59px;
         height: 100vh;
         border-radius: 10px;
         box-shadow: var(--shadow);

@@ -42,19 +42,18 @@
     font-weight: 700;
     font-size: 30px;
 }
-@media (min-width: 500px) {
+@media (min-width: 900px) {
     body {
         display: flex;
     }
 
     .receipt {
-        align-self: center;
-        justify-self: center;
         background-color: var(--green);
         gap: 1rem;
     }
 
     .receipt-container {
+        margin-top: 5rem;
         border-radius: 10px;
         box-shadow: var(--shadow);
     }

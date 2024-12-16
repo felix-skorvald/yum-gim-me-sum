@@ -68,9 +68,9 @@ h2 {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 900px) {
     .eta {
-        width: 100%;
+        width: 678.59px;
         height: 100vh;
         border-radius: 10px;
         justify-content: space-between;
