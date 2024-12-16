@@ -19,6 +19,7 @@ h2 {
 }
 
 #receipt-button {
+    cursor: pointer;
     background-color: var(--background-grey);
     color: var(--text-white);
     border: 2px solid var(--text-white);
@@ -31,6 +32,7 @@ h2 {
 }
 
 .reset-button {
+    cursor: pointer;
     background-color: var(--chosen-grey);
     color: var(--text-white);
     border: none;
@@ -71,10 +73,23 @@ h2 {
 @media (min-width: 900px) {
     .eta {
         width: 678.59px;
-        height: 100vh;
+        min-height: 100vh;
         border-radius: 10px;
         justify-content: space-between;
         box-shadow: var(--shadow);
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxtop {
+        width: 70%;
+        height: 70%;
+        object-fit: scale-down;
+        object-position: center;
     }
 }
 

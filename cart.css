@@ -58,6 +58,7 @@
     border-radius: 100%;
     background-color: var(--cart-grey);
     color: var(--background-grey);
+    cursor: pointer;
 }
 
 .cart footer {
@@ -88,6 +89,7 @@
 }
 
 #buy-button {
+    cursor: pointer;
     background-color: var(--chosen-grey);
     color: var(--text-white);
     border: none;
@@ -99,12 +101,13 @@
 
 #buy-button.empty {
     opacity: 0.3;
+    cursor: auto;
 }
 
 @media (min-width: 900px) {
     .cart {
         width: 678.59px;
-        height: 100vh;
+        min-height: 100vh;
         border-radius: 10px;
         box-shadow: var(--shadow);
     }
