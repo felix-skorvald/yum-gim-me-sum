@@ -51,6 +51,7 @@ async function sendCart(cart) {
     }
 }
 
+//Hämta kvittot
 async function getReceipt(orderId) {
     const options = {
         method: "GET",

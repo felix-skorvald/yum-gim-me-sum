@@ -1,6 +1,4 @@
-import { cart, cartToSend } from "./cart.js";
 import { resetToStart, showReceipt } from "./script.js";
-import { getReceipt } from "./api.js";
 
 const etaTime = document.querySelector("#eta-time");
 const etaOrderId = document.querySelector("#eta-order-id");
