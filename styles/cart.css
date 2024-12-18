@@ -27,11 +27,16 @@
 .cart-items {
     margin-top: 1rem;
     margin-bottom: auto;
+    padding: 1rem;
 }
 
 .item-container {
-    padding: 1rem;
-    border-bottom: 1px solid var(--pop-grey);
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid var(--cart-grey);
+}
+
+.item-container:last-child {
+    border-bottom: none;
 }
 
 .item-container > div {

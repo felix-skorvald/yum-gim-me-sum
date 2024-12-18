@@ -15,6 +15,7 @@
     color: var(--chosen-grey);
     margin-top: auto;
     margin-bottom: auto;
+    border-radius: 5px;
 }
 
 .receipt header {
@@ -28,6 +29,18 @@
     border-bottom: 2px dotted var(--chosen-grey);
 }
 
+.receipt-items > .item-container {
+    padding: 1rem;
+}
+
+.receipt-items .quantity {
+    padding: 0;
+}
+
+.receipt-items h3 {
+    margin-right: 0.5rem;
+}
+
 .receipt footer {
     display: flex;
     flex-direction: column;
@@ -35,7 +48,12 @@
 
 .receipt-container .cart-total {
     margin: 0;
-    border-radius: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.receipt-container .cart-total h4 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 #receipt-sum {
@@ -55,6 +73,7 @@
     .receipt-container {
         border-radius: 10px;
         box-shadow: var(--shadow);
+        width: 420px;
     }
 
     .receipt-container .cart-total {

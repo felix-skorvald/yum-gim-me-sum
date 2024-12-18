@@ -70,15 +70,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 900px) {
-    .eta {
-        width: 678.59px;
-        min-height: 100vh;
-        border-radius: 10px;
-        justify-content: space-between;
-        box-shadow: var(--shadow);
-    }
-
+@media (min-width: 600px) {
     .img-container {
         display: flex;
         justify-content: center;
@@ -90,6 +82,16 @@ h2 {
         height: 70%;
         object-fit: scale-down;
         object-position: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .eta {
+        width: 678.59px;
+        min-height: 100vh;
+        border-radius: 10px;
+        justify-content: space-between;
+        box-shadow: var(--shadow);
     }
 }
 
